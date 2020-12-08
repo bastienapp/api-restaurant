@@ -1,0 +1,2 @@
+node_modules/
+#.env # you need to ignore .env in your projects!
