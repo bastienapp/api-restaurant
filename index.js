@@ -1,17 +1,16 @@
-const { request } = require('express');
 const express = require('express');
 const app = express();
-const port = 3001; // 80,8080,3000,3306
+const port = 8080;
 
 const connection = require('./config');
 
 connection.connect(function (err) {
   if (err) {
-    console.error('error connecting: ' + err.stack);
+    console.error(`error connecting: ${err.stack}`);
     return;
   }
 
-  console.log('connected as id ' + connection.threadId);
+  console.log(`connected as id ${connection.threadId}`);
 });
 
 app.listen(port, () => {
