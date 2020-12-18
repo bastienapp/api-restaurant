@@ -10,7 +10,7 @@ app.use(
 );
 app.use(express.json());
 
-const router = require('./routes/index');
+const router = require('./api/index');
 router(app);
 
 app.listen(port, () => {
